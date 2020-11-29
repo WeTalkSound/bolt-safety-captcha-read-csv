@@ -44,6 +44,16 @@ func main()  {
 
 	writer := csv.NewWriter(csvFile)
 
+	var row []string
+	row = append(row, "Name")
+	row = append(row, "Handle")
+	row = append(row, "Social Media")
+	row = append(row, "Country")
+	row = append(row, "Score")
+	row = append(row, "Category")
+	row = append(row, "Time")
+	writer.Write(row)
+
 	for _, usance := range jsonData {
 		var row []string
 		row = append(row, usance.Name)
